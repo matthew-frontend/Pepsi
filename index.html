@@ -3,10 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Do you like me ?</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./assets/images/pepsi-icon-logo.png">
+  <title>Pep Si</title>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:image" content="https://matthew-frontend.github.io/PepsiDoyouLikeMe/assets/images/favpng_2.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PepSi">
+  <meta property="og:description" content="
+  ⠀⠀⢀⡤⢤⡀⠀⣠⡤⣤⡀⠀⣠⠤⣄⠀⣠⠤⢤⠀⣭
+  ⠀⠀⣏⠀⠀⣹⠰⡧⠦⠤⠇⢸⡁⠀⢈⡇⠙⠲⢤⡀⣿
+  ⠀⠀⡟⠓⠚⠁⠀⠙⠒⠚⠁⢸⠙⠒⠋⠀⠙⠒⠚⠁⠛
+  ⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀ ⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀">
+  <meta property="og:url" content="https://matthew-frontend.github.io/PepsiDoyouLikeMe/">
+
+  <!-- Twitter Card (เผื่อแชร์ไป Twitter ด้วย) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PepSi">
+  <meta name="twitter:description" content="
+  ⠀⠀⢀⡤⢤⡀⠀⣠⡤⣤⡀⠀⣠⠤⣄⠀⣠⠤⢤⠀⣭
+  ⠀⠀⣏⠀⠀⣹⠰⡧⠦⠤⠇⢸⡁⠀⢈⡇⠙⠲⢤⡀⣿
+  ⠀⠀⡟⠓⠚⠁⠀⠙⠒⠚⠁⢸⠙⠒⠋⠀⠙⠒⠚⠁⠛
+  ⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀ ⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀">
+  <meta name="twitter:image" content="https://matthew-frontend.github.io/PepsiDoyouLikeMe/assets/images/favpng_2.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,20 +51,19 @@
       <img id="imgBefore" src="./assets/images/cartoon2.gif" alt="">
       <img id="imgAfter" class="pop-in" src="./assets/images/cartoon.gif" alt="">
     </div>
-    <h1 id="textBefore" class="doYou">Do you like me ?</h1>
-    <h1 id="textAfter" class="doYou pop-in">Yeh ! I like you too 😍</h1>
+    <h2 id="textBefore" class="doYou">Do you like me ?</h2>
+    <h2 id="textAfter" class="doYou pop-in">Yeh ! I like you too 😍</h2>
     <div id="button-flex">
       <button id="yesBtn" type="button" class="btn">Yes</button>
       <button id="noBtn" type="button" class="btn" style="transition: top 0.3s ease, left 0.3s ease;">No</button>
     </div>
   </main>
 
-
   <!---- Footer ---->
 
   <script src="assets/js/main.js" defer></script>
 
-   <script>
+  <script>
     const noBtn = document.getElementById("noBtn");
     const yesBtn = document.getElementById("yesBtn");
     const questionContainer = document.getElementById("questionContainer");
