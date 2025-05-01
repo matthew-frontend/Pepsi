@@ -1,0 +1,77 @@
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do you like me ?</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+</head>
+
+<body>
+
+  <!---- Header ---->
+
+  <!---- Main Content ---->
+  <main id="questionContainer">
+    <div class="image-gif">
+      <img id="imgBefore" src="./assets/images/cartoon2.gif" alt="">
+      <img id="imgAfter" class="pop-in" src="./assets/images/cartoon.gif" alt="">
+    </div>
+    <h1 id="textBefore" class="doYou">Do you like me ?</h1>
+    <h1 id="textAfter" class="doYou pop-in">Yah ! I like you too 😍</h1>
+    <div id="button-flex">
+      <button id="yesBtn" type="button" class="btn">Yes</button>
+      <button id="noBtn" type="button" class="btn" style="transition: top 0.3s ease, left 0.3s ease;">No</button>
+    </div>
+  </main>
+
+
+  <!---- Footer ---->
+
+  <script src="assets/js/main.js" defer></script>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+    const questionContainer = document.getElementById("questionContainer");
+
+    noBtn.addEventListener("mouseover", () => {
+      const newX = Math.floor(Math.random() * (questionContainer.offsetWidth - noBtn.offsetWidth));
+      const newY = Math.floor(Math.random() * (questionContainer.offsetHeight - noBtn.offsetHeight));
+
+      noBtn.style.position = "absolute";
+      noBtn.style.left = `${newX}px`;
+      noBtn.style.top = `${newY}px`;
+    });
+
+    yesBtn.addEventListener("click", () => {
+      // ซ่อนของเดิม
+      document.getElementById("textBefore").style.display = "none";
+      document.getElementById("imgBefore").style.display = "none";
+      document.getElementById("button-flex").style.display = "none";
+
+      // รอ 0.5 วิ แล้วค่อยเด้งขึ้น
+      setTimeout(() => {
+        const imgAfter = document.getElementById("imgAfter");
+        const textAfter = document.getElementById("textAfter");
+
+        imgAfter.classList.add("show");
+        textAfter.classList.add("show");
+      }, 1000);
+    });
+  </script>
+
+</body>
+
+</html>

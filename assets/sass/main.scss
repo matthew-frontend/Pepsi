@@ -1,0 +1,24 @@
+@use 'variables/_variables';
+@use 'components';
+@use 'style';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Pangolin", cursive;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe5e9;
+    height: 100vh;
+  }
+  
+  a, button{
+    font-weight: 500;
+    transition: all .3s;
+  }
+}

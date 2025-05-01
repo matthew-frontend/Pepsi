@@ -1,0 +1,18 @@
+/*=================== Header ===================*/
+#mobile-menu{
+  transition: all .4s ease;
+}
+#mobile-menu #mobile-content{
+  transition: all 0.4s ease;
+}
+.-mr-30rem{
+  margin-right: -30rem;
+}
+/*=================== Footer ===================*/
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
