@@ -41,12 +41,21 @@
 
   <script src="assets/js/main.js" defer></script>
 
-  <script>
+   <script>
     const noBtn = document.getElementById("noBtn");
     const yesBtn = document.getElementById("yesBtn");
     const questionContainer = document.getElementById("questionContainer");
 
+    let enlarged = false;
+
     noBtn.addEventListener("mouseover", () => {
+      // เพิ่ม class แค่ครั้งแรก
+      if (!enlarged) {
+        noBtn.classList.add("enlarged");
+        enlarged = true;
+      }
+
+      // ทำให้ปุ่มหนี
       const newX = Math.floor(Math.random() * (questionContainer.offsetWidth - noBtn.offsetWidth));
       const newY = Math.floor(Math.random() * (questionContainer.offsetHeight - noBtn.offsetHeight));
 
@@ -61,7 +70,7 @@
       document.getElementById("imgBefore").style.display = "none";
       document.getElementById("button-flex").style.display = "none";
 
-      // รอ 0.5 วิ แล้วค่อยเด้งขึ้น
+      // รอ 1 วิ แล้วแสดงของใหม่
       setTimeout(() => {
         const imgAfter = document.getElementById("imgAfter");
         const textAfter = document.getElementById("textAfter");
