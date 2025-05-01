@@ -41,6 +41,15 @@ h1.doYou{
     }
   }
 }
+#noBtn {
+  transition: transform 0.2s ease, top 0.3s ease, left 0.3s ease;
+}
+.enlarged {
+  transform: scale(1.5);
+  transition: transform 0.2s ease;
+  z-index: 10;
+}
+
 #textAfter{
   display: none;
 }
