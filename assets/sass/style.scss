@@ -5,36 +5,51 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 .image-gif{
-  width: 510px;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 420px;
   height: 400px;
   img{
     width: 100%;
     height: 100%;
+    mix-blend-mode: multiply;
+    animation: fadeIn 1s ease-in-out;
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   }
 }
 h2.doYou{
   font-size: 3rem;
   font-weight: 700;
   color: #000;
-  margin: 30px 0;
+  margin: 30px 0 10px 0;
+  text-align: center;
 }
 #button-flex{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 25px;
   width: 156px;
   .btn{
     background-color: #ffa3ae;
     color: #fff;
     font-weight: 600;
     font-size: 18px;
-    border-radius: 18px;
-    width: 70px;
-    height: 34px;
+    border-radius: 8px;
+    width: 90px;
+    height: 38px;
     box-shadow: 0 6px 8px #f4bcc3;
-    transition: top 0.3s ease, left 0.3s ease;
+    transition: all 0.3s ease-in;
     &:hover{
       transform: scale(1.1);
       transition: top 0.3s ease, left 0.3s ease;
@@ -43,6 +58,10 @@ h2.doYou{
 }
 #noBtn {
   transition: transform 0.2s ease, top 0.3s ease, left 0.3s ease;
+  background-color: #fc344c !important;
+}
+#yesBtn {
+  background-color: #4caf50 !important;
 }
 .enlarged {
   transform: scale(1.5);
@@ -75,4 +94,30 @@ h2.doYou{
   animation: popIn 0.5s ease forwards;
   pointer-events: auto;
   display: block !important;
+}
+.message{
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ff758a;
+  margin-bottom: 40px;
+}
+
+#heart-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  font-size: 24px;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
 }
